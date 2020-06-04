@@ -29,9 +29,9 @@ from camper_age_input_hofmann import camper_age_input_hofmann
 
 class FunctionTestCase(unittest.TestCase):
     def test_something(self):
-        self.assertEqual(False, True)
+        self.assertEqual(360, camper_age_input_hofmann.convert_to_months(30))  # Good age range (in years): 3-72
 
 
 if __name__ == '__main__':
     unittest.main()
-  
+
