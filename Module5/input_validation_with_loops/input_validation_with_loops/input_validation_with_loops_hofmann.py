@@ -28,7 +28,7 @@ while user_number_input != -999:
         user_number_input = int(input('Please enter a number between 1 and 100. Type (-999) to quit: '))
         user_list.append(user_number_input)
 
-        if user_number_input == -999:
+        if user_number_input != -999:
             user_list.remove(-999)
             break
 
