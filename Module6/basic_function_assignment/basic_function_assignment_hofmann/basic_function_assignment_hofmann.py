@@ -10,8 +10,16 @@ simple input errors using a try-catch statement as well.
 
 def hourly_employee_input():
     user_name = input('Please enter a name: ')
-    hours_worked = int(input('Enter the number of hours worked please: '))
-    hourly_wage = float(input('What is the hourly rate of pay? '))
+    try:
+        hours_worked = int(input('Enter the number of hours worked please: '))
+    except ValueError as err0r:
+        print('\n\nHey jabronie, the input you entered didn\'t match the data type expected.\n')
+        raise
+    try:
+        hourly_wage = float(input('What is the hourly rate of pay? '))
+    except ValueError as err0r:
+        print('\n\nHey jabronie, the input you entered didn\'t match the data type expected.\n')
+        raise
 
     print('\nEmployee Name:', user_name,
           '\nHours Worked:', hours_worked,
@@ -19,7 +27,4 @@ def hourly_employee_input():
 
 
 if __name__ == '__main__':
-    try:
-        hourly_employee_input()
-    except ValueError as error:
-        print('\n\nHey jabronie, the input you entered didn\'t match the data type expected.')
+    hourly_employee_input()
