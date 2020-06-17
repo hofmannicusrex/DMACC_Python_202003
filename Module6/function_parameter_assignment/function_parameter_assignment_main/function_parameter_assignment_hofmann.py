@@ -3,7 +3,8 @@ Program: function_parameter_assignment_hofmann.py
 Author: Nick Hofmann | nickhofmann1989@hotmail.com | nohofmann@dmacc.edu
 Last Modified: 6/16/2020
 
-Program specifications: The program will .
+Program specifications: The program will demonstrate a basic function
+with parameters.
 """
 
 
