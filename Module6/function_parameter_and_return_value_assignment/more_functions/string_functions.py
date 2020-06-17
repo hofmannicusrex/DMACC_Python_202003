@@ -8,10 +8,14 @@ Program specifications: The program will .
 
 
 def multiply_string(message, n):
-    # string_return = message * n
-    # return string_return
-    pass
+    """
+    :param message: Contains a string that will be multiplied by an integer.
+    :param n: The integer that the string will be multiplied by.
+    :return: Returns the multiplied, concatenated string.
+    """
+    string_return = message * n
+    return string_return
 
 
 if __name__ == '__main__':
-    print(multiply_string('FuckThisLanguage', 4))
+    print(multiply_string('This language is confusing...it\'s supposed to be easy.\n', 15))
