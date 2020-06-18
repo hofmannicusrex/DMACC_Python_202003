@@ -17,15 +17,18 @@ class MyTestCase(unittest.TestCase):
     def test_score_input_test_score_valid(self):
         self.assertEqual('\nNick Hofmann: 97%', test_score_input.score_input('Nick Hofmann', 97))
 
-    # def test_score_input_test_score_below_range(self):
-        # self.assertEqual('Invalid test score, try again! ', test_score_input.score_input('Nick Hofmann', -1))
+    def test_score_input_test_score_below_range(self):
+        self.assertEqual(False, test_score_input.score_input('Nick Hofmann', -1))
 
-    # def test_score_input_test_score_above_range(self):
-        # self.assertEqual('\nNick Hofmann: 97%', test_score_input.score_input('Nick Hofmann', 666))
+    def test_score_input_test_score_above_range(self):
+        self.assertEqual(False, test_score_input.score_input('Nick Hofmann', 666))
 
-    # def test_score_input_test_score_non_numeric(self):
-        # self.assertEqual('\nNick Hofmann: 97%', test_score_input.score_input('Nick Hofmann', 'non numeric'))
-        # pass
+    def test_score_input_test_score_non_numeric(self):
+        self.assertEqual(ValueError, test_score_input.score_input('Nick Hofmann', 'non numeric'))
 
-    # def test_score_input_test_invalid_message(self):
-        # self.assertEqual('\nNick Hofmann: 95%', test_score_input.score_input('Nick Hofmann', 95, invalid_message='WRONG '))
+    def test_score_input_test_invalid_message(self):
+        self.assertEqual('\nNick Hofmann: 95%', test_score_input.score_input('Nick Hofmann', 95, invalid_message='WRONG '))
+
+
+if __name__ == '__main__':
+    unittest.main()
