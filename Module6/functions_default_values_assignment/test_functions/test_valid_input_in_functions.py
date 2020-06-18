@@ -14,8 +14,8 @@ class MyTestCase(unittest.TestCase):
     def test_score_input_test_name(self):
         self.assertEqual('\nNick Hofmann: 0%', test_score_input.score_input('Nick Hofmann'))
 
-    # def test_score_input_test_score_valid(self):
-        # self.assertEqual('\nNick Hofmann: 97%', test_score_input.score_input('Nick Hofmann', 97))
+    def test_score_input_test_score_valid(self):
+        self.assertEqual('\nNick Hofmann: 97%', test_score_input.score_input('Nick Hofmann', 97))
 
     # def test_score_input_test_score_below_range(self):
         # self.assertEqual('Invalid test score, try again! ', test_score_input.score_input('Nick Hofmann', -1))
