@@ -19,15 +19,15 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual('\nNick Hofmann: 97%', test_score_input.score_input('Nick Hofmann', 97))
 
     def test_score_input_test_score_below_range(self):
-        with mock_user_input.patch('builtins.input', side_effects=['Nick Hofmann', -1, -102, -5]):
+        with mock_user_input.patch('builtins.input', side_effect=['Nick Hofmann', -1, -102, -5, 78]):
             self.assertEqual('\nNick Hofmann: 78%', test_score_input.score_input('Nick Hofmann', 78))
 
     def test_score_input_test_score_above_range(self):
-        with mock_user_input.patch('builtins.input', side_effects=[666, 100]):
+        with mock_user_input.patch('builtins.input', side_effect=[666, 100]):
             self.assertEqual('\nNick: 100%', test_score_input.score_input('Nick', 100))
 
     def test_score_input_test_score_non_numeric(self):
-        with mock_user_input.patch('builtins.input', side_effects=[]):
+        with mock_user_input.patch('builtins.input', side_effect=[]):
             self.assertEqual(ValueError, test_score_input.score_input('Nick Hofmann', 'non numeric'))
 
     def test_score_input_test_invalid_message(self):
