@@ -1,7 +1,7 @@
 """
 Program: test_string_functions.py
 Author: Nick Hofmann | nickhofmann1989@hotmail.com | nohofmann@dmacc.edu
-Last Modified: 6/18/2020
+Last Modified: 6/20/2020
 
 Program specifications: Tester program for basic_list.py.
 """

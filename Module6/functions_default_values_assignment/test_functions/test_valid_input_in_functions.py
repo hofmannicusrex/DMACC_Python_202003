@@ -27,8 +27,8 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual('\nNick: 100%', test_score_input.score_input('Nick', 100))
 
     def test_score_input_test_score_non_numeric(self):
-        with mock_user_input.patch('builtins.input', side_effect=[]):
-            self.assertEqual(ValueError, test_score_input.score_input('Nick Hofmann', 'non numeric'))
+        with mock_user_input.patch('builtins.input', side_effect=['non numeric']):
+            self.assertEqual(TypeError, test_score_input.score_input('Nick Hofmann', '23'))
 
     def test_score_input_test_invalid_message(self):
         self.assertEqual('\nNick Hofmann: 95%', test_score_input.score_input('Nick Hofmann', 95, invalid_message='WRONG '))
